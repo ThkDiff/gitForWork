@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="583.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerForTask2">
+   <children>
+      <GridPane layoutX="201.0" layoutY="58.0" prefHeight="550.0" prefWidth="559.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="309.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="486.0" minHeight="10.0" prefHeight="480.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@design.css">
+               <GridPane.margin>
+                  <Insets left="1.0" />
+               </GridPane.margin>
+               <children>
+                  <TextField fx:id="TextF1" layoutX="264.0" layoutY="19.0" prefHeight="27.0" prefWidth="51.0" />
+                  <TextField fx:id="TextF2" layoutX="355.0" layoutY="59.0" prefHeight="27.0" prefWidth="51.0" />
+                  <TextField fx:id="ForPhase" layoutX="508.0" layoutY="59.0" prefHeight="27.0" prefWidth="51.0" />
+                  <TextField fx:id="ForFrequency" layoutX="475.0" layoutY="19.0" prefHeight="27.0" prefWidth="51.0" />
+                  <Text fill="WHITE" layoutX="107.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time interval">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="65.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of time samples ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="346.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequency">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="431.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phase">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane-main" stylesheets="@design.css" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="1.0" top="1.0" />
+               </GridPane.margin>
+               <children>
+                  <Button layoutX="379.0" layoutY="438.0" mnemonicParsing="false" onAction="#clear" styleClass="button-second" stylesheets="@design.css" text="Clear" />
+                  <Button layoutX="441.0" layoutY="438.0" mnemonicParsing="false" onAction="#getSpectrum" prefHeight="27.0" prefWidth="113.0" styleClass="button-second" stylesheets="@design.css" text="Plot the graph" />
+                  <LineChart fx:id="MyChat" layoutY="-5.0" prefHeight="433.0" prefWidth="659.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+                    <xAxis>
+                      <CategoryAxis prefHeight="0.0" prefWidth="600.0" side="BOTTOM" tickLabelFill="WHITE" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" tickLabelFill="WHITE" />
+                    </yAxis>
+                  </LineChart>
+                  <Button fx:id="ButForFourier" layoutX="49.0" layoutY="438.0" mnemonicParsing="false" onAction="#getSignalFromSpectrum" prefHeight="27.0" prefWidth="162.0" styleClass="button-second" stylesheets="@design.css" text="Get signal using IFT" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+.text-field{
+     -fx-text-fill: white;
+ }
+.button-first{
+    -fx-background-color: linear-gradient(to left,#2E2E2E,black);
+    -fx-text-fill: white;
+}
+
+.button-second{
+    -fx-background-color: linear-gradient(to right,#848484,black);
+    -fx-text-fill: white;
+}
+
+.button-first:hover{
+    -fx-border-color: wheat;
+    -fx-stroke-width: 20px;
+}
+
+.button-second:hover{
+    -fx-background-color: linear-gradient(to right,#BDBDBD,#2E2E2E);
+}
+.chart-plot-background{
+    -fx-background-color: linear-gradient(to left,#BDBDBD,black);
+}
+.chart-horizontal-grid-lines{
+    -fx-background-color: #566573;
+}
+.anchor-pane{
+    -fx-background-color: linear-gradient(#424242,black);
+}
+.anchor-pane-main{
+    -fx-background-color: linear-gradient(to left,#424242,black);
+}
+.anchor-pane-right{
+    -fx-background-color: linear-gradient(to right,#424242,black);
+}
+.text-field{
+    -fx-background-color: #848484;
+    -fx-text-fill: black;
+}
+
+.default-color0.chart-series-line {
+    -fx-stroke: yellow;
+}

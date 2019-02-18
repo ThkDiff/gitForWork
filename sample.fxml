@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <GridPane layoutX="282.0" layoutY="155.0" prefHeight="550.0" prefWidth="720.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="354.0" minWidth="10.0" prefWidth="175.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="674.0" minWidth="10.0" prefWidth="660.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane prefHeight="558.0" prefWidth="161.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="271.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="489.0" minHeight="10.0" prefHeight="487.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="448.0" prefWidth="229.0" styleClass="anchor-pane-right" stylesheets="@design.css" GridPane.rowIndex="1">
+                           <children>
+                              <Button layoutY="82.0" mnemonicParsing="false" onAction="#changeToTask1" prefHeight="42.0" prefWidth="175.0" styleClass="button-first" stylesheets="@design.css" text="Discrete signal" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Button>
+                              <Button layoutY="170.0" mnemonicParsing="false" onAction="#changeToTask2" prefHeight="42.0" prefWidth="175.0" styleClass="button-first" stylesheets="@design.css" text="Signal spectrum" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Button>
+                              <Button layoutX="1.0" layoutY="262.0" mnemonicParsing="false" onAction="#changeToTask3" prefHeight="42.0" prefWidth="173.0" styleClass="button-first" stylesheets="@design.css" text="Signal filtering" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Button>
+                           </children>
+                           <GridPane.margin>
+                              <Insets top="6.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="95.0" prefWidth="175.0" styleClass="anchor-pane-right" stylesheets="@design.css">
+                           <children>
+                              <Text fill="WHEAT" layoutX="19.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AlCod">
+                                 <font>
+                                    <Font size="48.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <GridPane.margin>
+                              <Insets bottom="-2.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="MainPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane layoutX="80.0" layoutY="99.0" prefHeight="550.0" prefWidth="559.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="262.0" minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="484.0" minHeight="10.0" prefHeight="480.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane" stylesheets="@design.css">
+                           <GridPane.margin>
+                              <Insets left="1.0" />
+                           </GridPane.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="anchor-pane-main" stylesheets="@design.css" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="1.0" top="1.0" />
+                           </GridPane.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <Text fill="WHITE" layoutX="277.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" layoutX="95.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="If you want to start press one of the tasks">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
